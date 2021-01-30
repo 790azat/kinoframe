@@ -55,7 +55,7 @@ class FilmsController extends Controller
     public function sort($category)
     {
 
-        $film = getfilms::where('category', 'Like', "%{$category}%")->paginate(16);
+        $film = getfilms::where('category', 'LIKE', "%{$category}%")->orWhere('category', 'LIKE', "{$category}")->paginate(16);
 
         return view('categories', ['films' => $film, 'category' => $category]);
     }

@@ -14,7 +14,7 @@
 
 @section('content')
     <main class="container mx-auto mt-3 d-flex justify-content-start align-items-center p-1 flex-wrap">
-        <a href="/categories/aниме" class="flex-grow-1 text-center bg-success text-light font-weight-bold py-2 px-3 border">Аниме</a>
+        <a href="/categories/аниме" class="flex-grow-1 text-center bg-success text-light font-weight-bold py-2 px-3 border">Аниме</a>
         <a href="/categories/биография" class="flex-grow-1 text-center bg-success text-light font-weight-bold py-2 px-3 border">Биографии</a>
         <a href="/categories/боевик" class="flex-grow-1 text-center bg-success text-light font-weight-bold py-2 px-3 border">Боевики</a>
         <a href="/categories/вестерн" class="flex-grow-1 text-center bg-success text-light font-weight-bold py-2 px-3 border">Вестерны</a>
