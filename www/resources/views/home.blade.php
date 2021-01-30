@@ -52,6 +52,12 @@
                                     @endif
                                     </tbody>
                                 </table>
+
+                                @if(Auth::user()->id == 1)
+                                    <div class="stat">
+
+                                    </div>
+                                @endif
                             </div>
                         @endif
 

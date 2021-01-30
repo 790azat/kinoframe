@@ -11,6 +11,7 @@
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Neucha" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <meta name="CatCuta7c2a44b9c" content="88644703FCD12E82CF4E7262C92AC9A1Y1485" />
 
     <!-- Yandex.Metrika counter -->
     <script type="text/javascript"> (function (m, e, t, r, i, k, a) {

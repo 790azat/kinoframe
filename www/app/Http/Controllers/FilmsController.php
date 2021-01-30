@@ -26,7 +26,7 @@ class FilmsController extends Controller
     {
         $search = $request->input('search');
 
-        $result = getfilms::where('name', 'LIKE', '%' . $search . '%', 'OR', 'en_name', 'LIKE', "%{$search}%")->get();
+        $result = getfilms::where('name', 'LIKE', "%{$search}%")->orWhere('en_name', 'LIKE', "%{$search}%")->get();
 
         return view('search', ['films' => $result, 'search' => $search]);
 
@@ -36,14 +36,14 @@ class FilmsController extends Controller
     {
         if ($request->get('query')) {
             $query = $request->get('query');
-            $data = getfilms::where('name', 'LIKE', "%{$query}%", 'OR' , 'en_name', 'LIKE',"%{$query}%")
+            $data = getfilms::where('name', 'LIKE', "%{$query}%")->orWhere('en_name', 'LIKE', "%{$query}%")
                 ->take(10)->get();
             $output = '<ul class="dropdown-menu p-0 border rounded shadow" style="display:block; position:relative">';
             foreach ($data as $row) {
                 if ($data != ' ') {
                     $output .= '
        <li class="dropdown-item-text p-1 pl-2 border pr-3">
-       <a class="mx-auto d-block" href="film/' . $row->id . '"><img width="30px" class="rounded mr-2" src="' . $row->image . '">' . $row->name . '</a></li>
+       <a class="mx-auto d-block" href="/film/' . $row->id . '"><img width="30px" class="rounded mr-2" src="' . $row->image . '">' . $row->name . '</a></li>
        ';
                 }
             }
