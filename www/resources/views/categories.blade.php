@@ -28,7 +28,7 @@
         <a href="/categories/мелодрама" class="flex-grow-1 text-center bg-success text-light font-weight-bold py-2 px-3 border">Мелодрамы</a>
         <a href="/categories/мультфильм" class="flex-grow-1 text-center bg-success text-light font-weight-bold py-2 px-3 border">Мультфильмы</a>
         <a href="/categories/мюзикл" class="flex-grow-1 text-center bg-success text-light font-weight-bold py-2 px-3 border">Мюзиклы</a>
-        <a href="/categories/приключение" class="flex-grow-1 text-center bg-success text-light font-weight-bold py-2 px-3 border">Приключения</a>
+        <a href="/categories/приключения" class="flex-grow-1 text-center bg-success text-light font-weight-bold py-2 px-3 border">Приключения</a>
         <a href="/categories/семейный" class="flex-grow-1 text-center bg-success text-light font-weight-bold py-2 px-3 border">Семейные</a>
         <a href="/categories/триллер" class="flex-grow-1 text-center bg-success text-light font-weight-bold py-2 px-3 border">Триллеры</a>
         <a href="/categories/ужас" class="flex-grow-1 text-center bg-success text-light font-weight-bold py-2 px-3 border">Ужасы</a>
@@ -41,9 +41,7 @@
         <a href="/categories/индийский" class="flex-grow-1 text-center bg-success text-light font-weight-bold py-2 px-3 border">Индийские</a>
         <a href="/categories/немецкий" class="flex-grow-1 text-center bg-success text-light font-weight-bold py-2 px-3 border">Немецкие</a>
         <a href="/categories/французский" class="flex-grow-1 text-center bg-success text-light font-weight-bold py-2 px-3 border">Французские</a>
-        <a href="/categories/сериал" class="flex-grow-1 text-center bg-success text-light font-weight-bold py-2 px-3 border">Сериалы</a>
         <a href="/categories/зарубежный" class="flex-grow-1 text-center bg-success text-light font-weight-bold py-2 px-3 border">Зарубежные</a>
-        <a href="/categories/турецкий" class="flex-grow-1 text-center bg-success text-light font-weight-bold py-2 px-3 border">Турецкие</a>
         <a href="/categories/сериал" class="flex-grow-1 text-center bg-success text-light font-weight-bold py-2 px-3 border">Сериалы</a>
 
         <div class="col-12 mt-3 d-flex flex-wrap justify-content-center">

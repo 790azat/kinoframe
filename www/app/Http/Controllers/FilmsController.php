@@ -54,7 +54,37 @@ class FilmsController extends Controller
 
     public function sort($category)
     {
+        if ($category == 'сериал') {
+            $film = getfilms::where('info', 'LIKE', "%Сезон%")->orWhere('info', 'LIKE', "%Серия%")->paginate(16);
 
+            return view('categories', ['films' => $film, 'category' => $category]);
+        }
+        elseif ($category == 'американский') {
+            $film = getfilms::where('info', 'LIKE', "%США%")->paginate(16);
+
+            return view('categories', ['films' => $film, 'category' => $category]);
+        }
+        elseif ($category == 'английский') {
+            $film = getfilms::where('info', 'LIKE', "%Великобритания%")->paginate(16);
+
+            return view('categories', ['films' => $film, 'category' => $category]);
+        }
+        elseif ($category == 'индийский') {
+            $film = getfilms::where('info', 'LIKE', "%Индия%")->paginate(16);
+
+            return view('categories', ['films' => $film, 'category' => $category]);
+        }
+        elseif ($category == 'немецкий') {
+            $film = getfilms::where('info', 'LIKE', "%Германия%")->paginate(16);
+
+            return view('categories', ['films' => $film, 'category' => $category]);
+        }
+        elseif ($category == 'французский') {
+            $film = getfilms::where('info', 'LIKE', "%Франция%")->paginate(16);
+
+            return view('categories', ['films' => $film, 'category' => $category]);
+        }
+        else
         $film = getfilms::where('category', 'LIKE', "%{$category}%")->orWhere('category', 'LIKE', "{$category}")->paginate(16);
 
         return view('categories', ['films' => $film, 'category' => $category]);
