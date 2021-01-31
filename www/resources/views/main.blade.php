@@ -31,13 +31,24 @@
 
     @yield('meta')
 
+    <style>
+        .logo:hover {
+            transform: rotate(360deg);
+        }
+        .pagination {
+            flex-wrap: wrap;
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+
 </head>
 <body class="d-flex flex-column">
 <header class="bg-dark">
     <div class="container bg-dark d-flex py-2 flex-wrap">
-        <div class="col-1 d-flex align-items-center">
+        <div class="col-1 d-flex align-items-center" style="margin: 0 10px">
             <a href="/" class="d-flex justify-content-end col-auto">
-                <img src="{{asset('movie.png')}}" alt="Movie" class="mw-100">
+                <img src="{{asset('movie.png')}}" alt="Movie" class="logo" style="width: 30px;transition: 1s">
             </a>
         </div>
         <div class="d-flex align-items-center navbar-brand">
@@ -75,7 +86,7 @@
             </nav>
         </menu>
         <div class="d-flex ml-auto">
-            <form class="d-flex mr-5" action="/search" method="get">
+            <form class="d-flex mr-sm-5 mr-md-3 mr-3" action="/search" method="get">
                 <input name="search" id="search" class="form-control h-75 my-auto" type="search" placeholder="Search"
                        aria-label="Search" autocomplete="off">
                 <div id="name_list" class="position-absolute mt-5 col-auto p-0" style="z-index: 10">
@@ -114,7 +125,7 @@
             </script>
 
             @auth()
-                <a href="/home" class="d-flex align-items-center mr-5 btn btn-outline-secondary">
+                <a href="/home" class="d-flex align-items-center btn btn-outline-secondary mr-sm-5 mr-0">
                     <div class="m-0 p-0 text-decoration-none d-flex">
                         <img src="{{asset('user.png')}}" alt="user" width="30" height="30">
                         <p class="text-light text-decoration-none my-auto mx-3">{{Auth::user()->name}}</p>
@@ -124,7 +135,7 @@
                 <div class="d-flex align-items-center">
                     <a href="/login" class="text-light text-decoration-none">Login</a>
                 </div>
-                <div class="ml-3 d-flex align-items-center mr-5">
+                <div class="ml-3 d-flex align-items-center mr-sm-5 mr-1">
                     <a href="/register" class="text-light text-decoration-none">Register</a>
                 </div>
             @endauth

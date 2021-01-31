@@ -15,12 +15,12 @@
                         @endif
 
                         @if(Auth::user())
-                            <div class="col-auto d-flex justify-content-start">
+                            <div class="col-auto d-flex justify-content-start flex-wrap">
 
                                 <img class="mr-5 p-2 bg-secondary rounded-circle" src="{{asset('user.png')}}" alt="user"
                                      width="80" height="80">
 
-                                <table class="table col-5 table-borderless">
+                                <table class="table col-5 table-borderless mt-sm-0 mt-3">
                                     <tbody>
                                     <tr class="d-flex align-items-center font-weight-bold">
                                         <th scope="row" class="badge-secondary badge col-4 mr-2"><h6
@@ -36,7 +36,13 @@
                                         <th scope="row" class="badge-secondary badge col-4 mr-2"><h6
                                                 class="m-0 font-weight-bold">Verified</h6></th>
                                         <td>@if(Auth::user()->email_verified_at == null)
-                                                <div class="btn btn-danger rounded-circle"></div> @endif</td>
+                                                <div class="btn btn-danger"
+                                                     style="width: 20px; height: 20px"></div>
+                                            @else
+                                                <div class="btn btn-success rounded-circle"
+                                                     style="width: 20px; height: 20px"></div>
+                                            @endif
+                                        </td>
                                     </tr>
                                     <tr class="d-flex align-items-center font-weight-bold">
                                         <th scope="row" class="badge-secondary badge col-4 mr-2"><h6

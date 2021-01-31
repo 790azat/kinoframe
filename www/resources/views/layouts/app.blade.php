@@ -36,14 +36,14 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <div class="collapse navbar-collapse mt-2 mt-sm-0" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
 
                     </ul>
 
                     <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ml-auto mr-5">
+                    <ul class="navbar-nav ml-auto mr-0 mr-sm-5">
                         <!-- Authentication Links -->
                         @guest
                             @if (Route::has('login'))
@@ -60,7 +60,7 @@
                         @else
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="text-light d-flex align-items-center btn btn-outline-secondary nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    <img src="{{asset('user.png')}}" alt="user" width="30" height="30">
+                                    <img src="{{asset('user.png')}}" alt="user" width="30" height="30" class="ml-2 ml-sm-0">
                                     <p class="ml-3 mr-2 my-auto">{{ Auth::user()->name }}</p>
                                 </a>
 
