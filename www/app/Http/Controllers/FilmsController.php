@@ -14,7 +14,6 @@ class FilmsController extends Controller
         return view('welcome', ['films' => $films]);
     }
 
-
     public function show_film($id)
     {
         $film = getfilms::all()->find($id);
@@ -92,7 +91,7 @@ class FilmsController extends Controller
 
     public function new()
     {
-        $films = getfilms::where('name', 'LIKE', '%2020%')->paginate(16);
+        $films = getfilms::where('name', 'LIKE', '%2021%')->orWhere('name', 'LIKE', '%2020%')->paginate(16);
 
         return view('new', ['films' => $films]);
     }
